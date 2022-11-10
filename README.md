@@ -54,7 +54,10 @@ plt.show()
 ```
 
 ## Output:
-![best fit line](sam.png)
+
+
+![exp 1 1](https://user-images.githubusercontent.com/114275126/201034861-105d4342-5863-40d1-a39c-7290191af879.PNG)
+![exp 1 2](https://user-images.githubusercontent.com/114275126/201034912-7b1ea7a2-150a-45ff-9b60-419f8991e8b8.PNG)
 
 
 ## Result:
