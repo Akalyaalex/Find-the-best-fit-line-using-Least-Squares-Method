@@ -23,42 +23,66 @@ Program to implement univariate Linear Regression to fit a straight line using l
 Developed by: Akalya A
 RegisterNumber: 212220220002
 ## Least squares method:
+import matplotlib.pyplot as plt
+x=[5,6,3,2,6,7,1,2]
+y=[2,3,6,5,8,3,5,8]
+plt.scatter(x,y);
+plt.plot(x,y)
+plt.show()
+
 import numpy as np
 import matplotlib.pyplot as plt
-X=np.array([8,2,11,6,5,4,12,9,6,1])
-Y=np.array([3,10,3,6,8,12,1,4,9,14])
+
+# assign input
+
+X=np.array([0,1,2,3,4,5,6,7,8,9])
+Y=np.array([1,3,2,5,7,8,8,9,10,12])
+
+# mean values of input
+
 X_mean=np.mean(X)
 print(X_mean)
 Y_mean=np.mean(Y)
 print(Y_mean)
-for i in range(len(X)):
-  a=i-X_mean
-  print(a)
-  for j in range(len(y)):
-  b=j-Y_mean
-  print(b)
-  num=denum=0
-for i in range(len(X)):
+
+num=0
+denum=0
+
+for i in range (len(X)):
   num+=(X[i]-X_mean)*(Y[i]-Y_mean)
   denum+=(X[i]-X_mean)**2
+  
+# find m
+
 m=num/denum
-bb=Y_mean-m*X_mean
-print(m,bb)
-Y_pred=m*X+bb
+print(m)
+
+# find b
+
+b=Y_mean-m*X_mean
+print(b)
+
+# find Y_pred
+
+Y_pred=m*X+b
 print(Y_pred)
-plt.scatter(X,Y,color='red')
+
+# plot graph
+
 plt.scatter(X,Y)
-plt.plot(X,Y_pred,color='violet')
+plt.plot(X,Y_pred,color='green')
 plt.show()
 */
 
 ```
 
 ## Output:
+![exp 1](https://user-images.githubusercontent.com/114275126/202153836-6f8f6cae-d46a-45cf-ae9d-d68462689296.PNG)
+![exp 2](https://user-images.githubusercontent.com/114275126/202153859-948bf44c-71ce-4b83-b3c2-b5758c6b9f1e.PNG)
+![exp 3](https://user-images.githubusercontent.com/114275126/202153876-d0dc7dce-e205-4fc4-b63f-26f71e6cfa7e.PNG)
 
 
-![exp 1 1](https://user-images.githubusercontent.com/114275126/201034861-105d4342-5863-40d1-a39c-7290191af879.PNG)
-![exp 1 2](https://user-images.githubusercontent.com/114275126/201034912-7b1ea7a2-150a-45ff-9b60-419f8991e8b8.PNG)
+
 
 
 ## Result:
